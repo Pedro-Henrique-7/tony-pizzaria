@@ -1,7 +1,12 @@
+/* Definir variaveis para cores */
+
 :root {
     --primary-color: #f07807;
     --second-color: #f7e5d8;
 }
+
+
+/* Formatação Padrão */
 
 * {
     margin: 0;
@@ -20,17 +25,28 @@ li {
     list-style: none;
 }
 
+
+/* ------------------------------------------ */
+
+
+/* Adicionar cor ao Body, adicionar espaçamento interno e definir fonte poppins para todos os elementos dentro do mesmo */
+
 body {
     padding: 0 80px;
     font-family: "Poppins", sans-serif;
     background-color: var(--second-color);
 }
 
+
+/* --------------------------------------------- */
+
+
+/* Centralizar conteudo do header, fixar o header tornando-o flutuante e espaçar o mesmo do top da pagina */
+
 header {
     display: flex;
     justify-content: space-between;
     top: 60px;
-    /* background-color: #fef2e7; */
     height: 60px;
     width: calc(100% - 160px);
     position: fixed;
@@ -42,6 +58,12 @@ header menu {
     gap: 48px;
     align-items: center;
 }
+
+
+/* ---------------------------------------------------- */
+
+
+/* Formatação do Botão de login com variaveis definidas anteriormente e add de trasição e sombra com transition e box-shadow */
 
 header li {
     padding: 4px 10px;
@@ -68,9 +90,11 @@ header button {
     font-weight: 600;
 }
 
+
+/* ------------------------------------------------------------------ */
+
 main {
     height: 700px;
-    /* background-color: orange; */
 }
 
 footer {
