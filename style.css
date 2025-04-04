@@ -1,3 +1,8 @@
+:root {
+    --primary-color: #f07807;
+    --second-color: #f7e5d8;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -9,25 +14,63 @@ a {
     color: inherit;
 }
 
-ul ol li {
+ul,
+ol,
+li {
     list-style: none;
 }
 
 body {
     padding: 0 80px;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--second-color);
 }
 
 header {
+    display: flex;
+    justify-content: space-between;
     top: 60px;
-    background-color: beige;
+    /* background-color: #fef2e7; */
     height: 60px;
     width: calc(100% - 160px);
     position: fixed;
+    align-items: center;
+}
+
+header menu {
+    display: flex;
+    gap: 48px;
+    align-items: center;
+}
+
+header li {
+    padding: 4px 10px;
+    transition: 0.5s;
+}
+
+header li:hover {
+    background-color: var(--second-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.278);
+}
+
+header button {
+    width: 120px;
+    height: 48px;
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.278);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    background-color: var(--second-color);
+    font-weight: 600;
 }
 
 main {
     height: 700px;
-    background-color: orange;
+    /* background-color: orange; */
 }
 
 footer {
