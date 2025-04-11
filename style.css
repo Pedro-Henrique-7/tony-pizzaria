@@ -3,6 +3,8 @@
 :root {
     --primary-color: #f07807;
     --second-color: #f7e5d8;
+    --default-padding: 0 80px;
+    --default-shadow: 0px 4px 4px #0005
 }
 
 
@@ -32,7 +34,6 @@ li {
 /* Adicionar cor ao Body, adicionar espaçamento interno e definir fonte poppins para todos os elementos dentro do mesmo */
 
 body {
-    padding: 0 80px;
     font-family: "Poppins", sans-serif;
     background-color: var(--second-color);
 }
@@ -48,9 +49,10 @@ header {
     justify-content: space-between;
     top: 60px;
     height: 60px;
-    width: calc(100% - 160px);
+    width: 100%;
     position: fixed;
     align-items: center;
+    padding: var(--default-padding);
 }
 
 header menu {
@@ -93,11 +95,132 @@ header button {
 
 /* ------------------------------------------------------------------ */
 
-main {
-    height: 700px;
+main {}
+
+section {
+    height: 100vh;
+    padding: var(--default-padding);
+}
+
+.home {
+    background-image: url(./assets/icons/bg-home.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: contain;
+    display: grid;
+    grid-template-rows: 3fr, 1rem;
+}
+
+.container-top {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 64px;
+}
+
+.container-top h2 {
+    position: relative;
+    bottom: 80px;
+    font-size: 4rem;
+    font-weight: 500;
+    font-style: italic;
+    width: 568px;
+}
+
+.container-top span {
+    color: var(--primary-color);
+}
+
+.container-pizzas {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pizza {
+    box-shadow: var(--default-shadow);
+    display: grid;
+    border-radius: 15px;
+    position: relative;
+}
+
+.add-pizza {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    display: grid;
+    place-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: var(--primary-color);
+    font-size: 2rem;
+    color: white;
+    border-radius: 12px;
+    border: 4px solid white;
+    opacity: 0;
+    transition: .6s;
+}
+
+.overflow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.container-info {
+    bottom: -36px;
+    position: absolute;
+    height: 36px;
+    width: 100%;
+    background-color: #0008;
+    border-radius: 0 0 8px 8px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 16px;
+    align-items: center;
+    transition: .5s;
+}
+
+.pizza:hover .container-info {
+    bottom: 0;
+}
+
+.container-info p {
+    font-size: 10px;
+    font-weight: 200px;
+    width: 102px;
+    color: white;
+}
+
+.container-info span {
+    font-size: 10px;
+    display: grid;
+    place-content: center;
+    font-weight: 200px;
+    width: 57px;
+    height: 20px;
+    padding: 5px;
+    background-color: var(--primary-color);
+    border-radius: 4px;
+    color: white;
+    font-weight: bold;
+}
+
+.pizza:hover .add-pizza {
+    opacity: 1;
+}
+
+.cardapio {
+    background-color: purple;
+}
+
+.servicos {
+    background-color: black;
 }
 
 footer {
     height: 526px;
-    background-color: brown;
 }
