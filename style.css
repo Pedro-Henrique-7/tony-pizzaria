@@ -214,7 +214,15 @@ section {
 }
 
 .cardapio {
-    background-color: purple;
+    background-color: #fafafa;
+}
+
+.cardapio-item {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    border-bottom: 1px solid var(--primary-color);
+    height: 260px;
 }
 
 .section-title {
@@ -227,6 +235,18 @@ section {
     font-size: 2.5rem;
     color: var(--primary-color);
     font-weight: 400;
+}
+
+.item-texto {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-texto h4,
+.item-texto a {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 600;
 }
 
 .servicos {
