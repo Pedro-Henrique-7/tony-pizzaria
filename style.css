@@ -214,6 +214,9 @@ section {
 }
 
 .cardapio {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     background-color: #fafafa;
 }
 
@@ -223,6 +226,10 @@ section {
     flex-direction: column;
     border-bottom: 1px solid var(--primary-color);
     height: 260px;
+}
+
+.cardapio-item:last-child {
+    border: none;
 }
 
 .section-title {
@@ -247,6 +254,33 @@ section {
     color: var(--primary-color);
     font-size: 1.5rem;
     font-weight: 600;
+}
+
+.bebida {
+    box-shadow: none;
+    transition: 0.5;
+    padding: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.bebida .preco {
+    color: var(--primary-color);
+    display: flex;
+}
+
+.bebida p {
+    width: 100%;
+}
+
+.bebida .descricao {
+    font-size: 0.6rem;
+}
+
+.bebida:hover {
+    box-shadow: var(--default-shadow);
 }
 
 .servicos {
