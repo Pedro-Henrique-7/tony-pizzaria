@@ -479,3 +479,24 @@
                     padding-bottom: 72px;
                 }
             }
+            
+            @media (max-width: 768px) {
+                 :root {
+                    --default-padding: 0 48px;
+                }
+                .container-top img {
+                    display: none;
+                }
+                .container-top h2 {
+                    width: 287px;
+                    font-size: 2rem;
+                    bottom: -200px;
+                }
+                .home {
+                    background-image: url(../assets/img/pizza-backgroud.jpg);
+                    background-size: cover;
+                    background-position-x: -326px;
+                    background-repeat: no-repeat;
+                    position: relative;
+                }
+            }
